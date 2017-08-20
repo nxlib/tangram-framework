@@ -1,12 +1,4 @@
 {
-  "require": {},
-  "namespace": {},
-  "path": {
-    "modules": "modules",
-    "applications": "applications"
-  },
-  "controller-sign": {
-    "web": "web-page",
-    "restful": "restful"
-  }
+    "require":{},
+    "namespace":{}
 }
