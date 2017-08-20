@@ -3,7 +3,15 @@
 
   },
   "require": {
-    "nxlib/rdsorm":  "1.0.*",
-    "nxlib/mvc":  "1.*.*"
+    "nxlib/rdsorm":  "2.1.*",
+    "nxlib/mvc":  "2.0.*",
+    "nxlib/request":"0.0.*",
+    "nxlib/oauth2":  "0.0.1"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
   }
 }
