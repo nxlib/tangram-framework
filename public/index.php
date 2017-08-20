@@ -18,8 +18,8 @@ include $path.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
 include $path.DIRECTORY_SEPARATOR.'tangram-modules'.DIRECTORY_SEPARATOR.'autoload.php';
 
 //init mysql config
-$mysql_config = require $path.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'mysql.config.php';
-\NxLib\RdsOrm\Instance::init($mysql_config);
+//$mysql_config = require $path.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'mysql.config.php';
+//\NxLib\RdsOrm\Instance::init($mysql_config);
 
 //open nxlib mvc
 \NxLib\Core\MVC::init(dirname(__FILE__),AutoLoadClassMap::getMap());

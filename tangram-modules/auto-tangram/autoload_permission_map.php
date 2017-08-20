@@ -5,6 +5,7 @@ class AutoPermissionMap
         'uri/uri1' => [
             'title' => '权限1',
             'type' => 'menu',
+            'auth' => true,
             'parent' => ''
         ]
     ];
