@@ -49,14 +49,6 @@ try{
     ];
     header('Content-type: application/json; charset=utf-8');
     die(json_encode($rs));
-}catch (\Puzzle\Auth\Exception\AuthException $authException){
-    $rs = [
-        'status' => 400,
-        "msg" => $authException->getMessage(),
-        "data" => (new stdClass())
-    ];
-    header('Content-type: application/json; charset=utf-8');
-    die(json_encode($rs));
 }
 //catch (Error $exception){
 //    $rs = [
