@@ -1,0 +1,25 @@
+{
+  "name": "admin",
+  "description": "admin",
+  "keywords": ["admin"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Garming Lau",
+      "email": "garming@msn.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "require-module": {
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Restful\\Controller\\": "restful/controller"
+    }
+  },
+  "web": "web-page",
+  "restful": "restful"
+}

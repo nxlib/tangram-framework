@@ -1,6 +1,5 @@
 <?php
-class AutoPermissionMap
-{
+class AutoPermissionMap{
     private static $map = [
 
     ];

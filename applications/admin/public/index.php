@@ -22,25 +22,17 @@ include PROJECT_ROOT.DIRECTORY_SEPARATOR.'tangram-modules'.DIRECTORY_SEPARATOR.'
 
 try{
     //init mysql config
-    $mysql_config = require $path.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'mysql.config.php';
-    \NxLib\RdsOrm\Instance::init($mysql_config);
+    //$mysql_config = require $path.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'mysql.config.php';
+    //\NxLib\RdsOrm\Instance::init($mysql_config);
 
     //open nxlib mvc
-    \NxLib\Core\MVC::init($path,AutoLoadClassMap::getMap(),AutoViewsPath::getMap());
+    \NxLib\Core\MVC::init($path,AutoLoadClassMap::getMap());
 
     //run router dispatch
     $inspectors = [
 //        [(new Puzzle\Auth\Inspector\Inspector()),'check']
     ];
     \NxLib\Core\Dispatch::run(AutoRouterMap::getMap(),$inspectors);
-}catch (\NxLib\Core\ParamException $paramException){
-    $rs = [
-        'status' => 400,
-        "msg" => $paramException->getMessage(),
-        "data" => (new stdClass())
-    ];
-    header('Content-type: application/json; charset=utf-8');
-    die(json_encode($rs));
 }catch (\NxLib\RdsOrm\Lib\Exception\ORMSaveException $ORMSaveException){
     $rs = [
         'status' => 400,

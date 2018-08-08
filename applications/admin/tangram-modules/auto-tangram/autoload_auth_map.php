@@ -1,6 +1,5 @@
 <?php
-class AutoAuthMap
-{
+class AutoLoadAuthMap{
     private static $map = [
 
     ];
