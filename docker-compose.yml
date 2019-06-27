@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  php-fpm:
+    image: php:7.1-fpm-alpine
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "9000"
+    networks:
+      - backend
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "50000:50000"
+    volumes:
+      - ./etc/nginx.conf.d:/etc/nginx/conf.d
+      - ./:/var/www/html
+    networks:
+      - backend
+      - frontend
+networks:
+  frontend:
+  backend:
